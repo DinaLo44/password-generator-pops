@@ -1,6 +1,6 @@
 # password-generator-pops
 
-This project consisted in creating code to generate a password that could include a minimum of 8 characters and a maximum of 128.
+This project consisted of creating code to generate a password that could include a minimum of 8 characters and a maximum of 128.
 
 When a user clicks on the "Generate Password" button, the application asks how many characters would like for its password to include. If the user chooses a number less than 8 and more than 128, an alert would come up explaining that the range length must be within the aforementioned parameters.
 
