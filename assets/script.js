@@ -8,7 +8,7 @@ var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
 function userOptions() {
   console.log("calling user options");
-  var inputString = [];
+  var inputLine = [];
 
   //Password length set up
 
@@ -28,7 +28,7 @@ function userOptions() {
   var wantUpperCaseCharacters = confirm("Do you want to include UPPERCASE characters?")
   console.log(wantUpperCaseCharacters);
   if (wantUpperCaseCharacters) {
-    inputString = inputString.concat(upperCase);
+    inputLine = inputLine.concat(upperCase);
   }
 
 
@@ -37,7 +37,7 @@ function userOptions() {
   var wantLowerCaseCharacters = confirm("Do you want to include LOWERCASE characters?")
   console.log(wantLowerCaseCharacters);
   if (wantLowerCaseCharacters) {
-    inputString = inputString.concat(lowerCase);
+    inputLine = inputLine.concat(lowerCase);
   }
   
   
@@ -46,7 +46,7 @@ function userOptions() {
   var wantSpecialCharacters = confirm("Do you want to include SPECIAL characters?")
   console.log(wantSpecialCharacters);
   if (wantSpecialCharacters) {
-    inputString = inputString.concat(specialCharacters);
+    inputLine = inputLine.concat(specialCharacters);
   }
   
   
@@ -55,7 +55,7 @@ function userOptions() {
   var wantNumbers = confirm("Do you want to include NUMBERS?")
   console.log(wantNumbers);
   if (wantNumbers) {
-    inputString = inputString.concat(numbers);
+    inputLine = inputLine.concat(numbers);
   }
 
   //Objects
@@ -65,7 +65,7 @@ function userOptions() {
     wantLower: wantLowerCaseCharacters,
     wantSpecial: wantSpecialCharacters,
     wantNumeric: wantNumbers,
-    inputString
+    inputLine
   };
 
   console.log(userPreferences,"user preferences");
@@ -80,9 +80,8 @@ function generatePassword() {
   
  // This loop generates the password within the box 
   for (var i = 0; i < passwordOptions.passLength; i++) {
-    password += passwordOptions.inputString[
-    Math.floor(Math.random() * passwordOptions.inputString.length)]
-    ;
+    password += passwordOptions.inputLine[
+    Math.floor(Math.random() * passwordOptions.inputLine.length)];
   }return password;
 }
 
